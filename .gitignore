@@ -1,0 +1,8 @@
+.DS_Store
+.env
+.vscode
+Thumbs.db
+composer.lock
+composer.phar
+.phpunit.result.cache
+vendor/

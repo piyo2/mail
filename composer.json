@@ -1,0 +1,21 @@
+{
+    "name": "piyo2/mail",
+    "description": "PHP mail composer",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Piyo2\\Mail\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shinichiro Yabu",
+            "email": "scin.ichi@gmail.com"
+        }
+    ],
+    "require": {
+        "piyo2/cimap": "^1.0",
+        "piyo2/path": "^1.0"
+    }
+}
