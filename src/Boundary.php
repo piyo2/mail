@@ -124,8 +124,8 @@ class Boundary
 	protected function encodeText(string $body): string
 	{
 		// メール本文の改行コードは \r\n とする
-		$body = preg_replace('/\\r\\n?|\\n/', "\r\n", $body);
 		$body = Normalizer::normalize($body);
+		$body = preg_replace('/\\r\\n?|\\n/', "\r\n", $body);
 		$body = \base64_encode($body);
 		return chunk_split($body, self::LINE_LENGTH, PHP_EOL);
 	}

@@ -87,10 +87,10 @@ class Header
 	{
 		static $asciis = '\\r\\n\\x20-\\x7E';
 
+		$value = Normalizer::normalize($value);
 		return \preg_replace_callback("/[$asciis]+|[^$asciis]+/", function ($matches) use ($asciis) {
 			$str = $matches[0];
 			if (\preg_match("/[^$asciis]|[?]/", $str)) {
-				$str = Normalizer::normalize($str);
 				return \mb_encode_mimeheader($str, 'UTF-8', 'B', PHP_EOL);
 			} else {
 				return $str;
