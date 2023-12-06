@@ -165,12 +165,12 @@ class Mail
 	/**
 	 * 改行コードを mail() 用に変換する
 	 *
-	 * @param string $str
+	 * @param string|null $str
 	 * @return string
 	 */
-	protected function eol(string $str): string
+	protected function eol(string $str = null): string
 	{
-		return str_replace(PHP_EOL, "\n", $str);
+		return str_replace(PHP_EOL, "\n", $str ?? '');
 	}
 
 	/**
